@@ -1,0 +1,12 @@
+apiVersion: skupper.io/v2alpha1
+kind: Link
+metadata:
+  name: link-to-site-a
+  namespace: interconnect-demo
+spec:
+  tlsCredentials: link-to-site-a
+  endpoints:
+    - group: skupper-router
+      host: REPLACE_WITH_SITE_A_ROUTER_HOST
+      port: "55671"
+      name: inter-router

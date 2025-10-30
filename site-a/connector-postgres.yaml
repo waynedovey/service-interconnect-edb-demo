@@ -1,0 +1,9 @@
+apiVersion: skupper.io/v2alpha1
+kind: Connector
+metadata:
+  name: site-a-postgres
+  namespace: interconnect-demo
+spec:
+  routingKey: postgres-site-a
+  host: site-a-db-rw.edb-demo.svc.cluster.local
+  port: 5432

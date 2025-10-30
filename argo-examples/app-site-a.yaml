@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: si-site-a
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/waynedovey/service-interconnect-edb-demo
+    targetRevision: main
+    path: site-a
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: interconnect-demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

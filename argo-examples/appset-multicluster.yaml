@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: si-edb-multicluster
+  namespace: openshift-gitops
+spec:
+  generators:
+    - clusters:
+        selector:
+          matchLabels:
+            env: demo
+  template:
+    metadata:
+      name: si-{{name}}
+    spec:
+      project: default
+      destination:
+        name: "{{name}}"
+        namespace: interconnect-demo
+      source:
+        repoURL: https://github.com/waynedovey/service-interconnect-edb-demo
+        targetRevision: main
+        path: '{{if eq name "site-a"}}site-a{{else}}site-b{{end}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true

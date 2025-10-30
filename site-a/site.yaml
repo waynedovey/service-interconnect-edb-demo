@@ -1,0 +1,9 @@
+apiVersion: skupper.io/v2alpha1
+kind: Site
+metadata:
+  name: site-a
+  namespace: interconnect-demo
+spec:
+  routerMode: interior
+  metadata:
+    displayName: "Tokyo site (site-a)"

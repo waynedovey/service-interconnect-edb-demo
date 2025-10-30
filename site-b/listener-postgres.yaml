@@ -1,0 +1,9 @@
+apiVersion: skupper.io/v2alpha1
+kind: Listener
+metadata:
+  name: postgres-from-site-a
+  namespace: interconnect-demo
+spec:
+  routingKey: postgres-site-a
+  host: site-a-db-rw
+  port: 5432

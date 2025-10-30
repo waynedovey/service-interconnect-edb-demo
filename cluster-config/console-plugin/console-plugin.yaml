@@ -1,0 +1,16 @@
+apiVersion: console.openshift.io/v1
+kind: ConsolePlugin
+metadata:
+  name: openshift-site-plugin
+  labels:
+    app.kubernetes.io/instance: rhsi-system
+spec:
+  backend:
+    service:
+      name: openshift-site-plugin
+      namespace: openshift-site-plugin
+      port: 9443
+      basePath: /
+  displayName: OpenShift Site Plugin
+  i18n:
+    loadType: Preload

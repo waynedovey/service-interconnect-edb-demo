@@ -1,0 +1,9 @@
+apiVersion: skupper.io/v2alpha1
+kind: Site
+metadata:
+  name: site-b
+  namespace: interconnect-demo
+spec:
+  routerMode: interior
+  metadata:
+    displayName: "Seoul site (site-b)"

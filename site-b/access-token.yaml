@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: link-to-site-a
+  namespace: interconnect-demo
+type: Opaque
+stringData:
+  ca.crt: REPLACE_ME
+  tls.crt: REPLACE_ME
+  tls.key: REPLACE_ME
