@@ -10,7 +10,7 @@ spec:
     targetRevision: main
     path: site-a
   destination:
-    name: site-a-application-manager-cluster-secret
+    name: site-a
     namespace: interconnect-demo
   syncPolicy:
     automated:
