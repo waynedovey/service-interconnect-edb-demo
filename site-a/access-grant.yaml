@@ -1,0 +1,8 @@
+apiVersion: skupper.io/v2alpha1
+kind: AccessGrant
+metadata:
+  name: site-a-to-site-b
+  namespace: interconnect-demo
+spec:
+  redemptionsAllowed: 1
+  expirationWindow: 1h

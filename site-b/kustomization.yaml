@@ -5,4 +5,5 @@ resources:
   - site.yaml
   - link-to-site-a.yaml
   - listener-postgres.yaml
+  - edb-cluster.yaml
   - external-secret-skupper-link.yaml
