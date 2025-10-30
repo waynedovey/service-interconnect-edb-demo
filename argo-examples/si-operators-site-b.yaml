@@ -12,7 +12,7 @@ spec:
     targetRevision: main
     path: operators
   destination:
-    name: site-b-application-manager-cluster-secret
+    name: site-b
     namespace: openshift-operators
   syncPolicy:
     automated:
