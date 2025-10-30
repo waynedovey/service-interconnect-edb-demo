@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: si-site-b
+  name: si-operators-site-a
   namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   project: default
   source:
     repoURL: https://github.com/waynedovey/service-interconnect-edb-demo
     targetRevision: main
-    path: site-b
+    path: operators
   destination:
-    server: https://kubernetes.default.svc
-    namespace: interconnect-demo
+    name: site-a-application-manager-cluster-secret
+    namespace: openshift-operators
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true

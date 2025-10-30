@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: si-operators
+  name: si-operators-site-b
   namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
@@ -12,7 +12,7 @@ spec:
     targetRevision: main
     path: operators
   destination:
-    server: https://kubernetes.default.svc
+    name: site-b-application-manager-cluster-secret
     namespace: openshift-operators
   syncPolicy:
     automated:
