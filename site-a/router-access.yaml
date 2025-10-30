@@ -1,7 +1,0 @@
-apiVersion: skupper.io/v2alpha1
-kind: RouterAccess
-metadata:
-  name: site-a-router
-  namespace: interconnect-demo
-spec:
-  ingress: loadbalancer

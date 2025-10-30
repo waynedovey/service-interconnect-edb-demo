@@ -8,17 +8,3 @@ spec:
   enablePDB: true
   storage:
     size: 5Gi
-    resizeInUseVolumes: true
-  walStorage:
-    size: 1Gi
-    resizeInUseVolumes: true
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: app-user-secret
-  namespace: edb-demo
-type: kubernetes.io/basic-auth
-stringData:
-  username: appuser
-  password: AppUserP@ssw0rd

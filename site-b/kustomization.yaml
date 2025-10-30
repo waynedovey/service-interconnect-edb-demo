@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
   - namespaces.yaml
   - site.yaml
-  - access-token.yaml
   - link-to-site-a.yaml
   - listener-postgres.yaml
-  - edb-cluster.yaml
+  - external-secret-skupper-link.yaml

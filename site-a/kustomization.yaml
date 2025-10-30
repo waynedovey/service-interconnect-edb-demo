@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
   - namespaces.yaml
   - site.yaml
-  - router-access.yaml
-  - access-grant.yaml
   - edb-cluster.yaml
   - connector-postgres.yaml
+  - external-secret-db-user.yaml
